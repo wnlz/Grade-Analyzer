@@ -1,0 +1,256 @@
+/* ============================================================
+   styles.css — 教师成绩分析工具自定义样式
+   主色调: #2E86AB  背景色: #F8F9FA  文字色: #000000
+   ============================================================ */
+
+/* ── Google Fonts 引入 ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+/* ── 全局重置 ── */
+html, body, [class*="css"] {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+    color: #000000 !important;
+}
+
+/* ── 主背景 ── */
+.stApp {
+    background-color: #F8F9FA !important;
+}
+
+/* ── 顶部标题栏 ── */
+.main-header {
+    background: linear-gradient(135deg, #2E86AB 0%, #1a5f7a 100%);
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px rgba(46, 134, 171, 0.3);
+}
+.main-header h1 {
+    color: #ffffff !important;
+    font-size: 1.9rem !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    letter-spacing: 0.05em;
+}
+.main-header p {
+    color: rgba(255,255,255,0.85) !important;
+    font-size: 0.95rem !important;
+    margin-top: 0.4rem !important;
+}
+
+/* ── 卡片容器 ── */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E9ECEF;
+    transition: box-shadow 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* ── 统计指标卡 ── */
+.metric-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-top: 4px solid #2E86AB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46,134,171,0.2);
+}
+.metric-value {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #2E86AB !important;
+    line-height: 1.2;
+}
+.metric-label {
+    font-size: 0.85rem !important;
+    color: #555555 !important;
+    margin-top: 0.3rem;
+}
+
+/* ── 按钮样式覆盖 ── */
+.stButton > button {
+    background-color: #2E86AB !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.55rem 1.4rem !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease !important;
+    box-shadow: 0 2px 8px rgba(46,134,171,0.25) !important;
+}
+.stButton > button:hover {
+    background-color: #1a5f7a !important;
+    box-shadow: 0 4px 14px rgba(46,134,171,0.4) !important;
+    transform: translateY(-1px) !important;
+}
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* 次要按钮（下载类）*/
+.stDownloadButton > button {
+    background-color: #ffffff !important;
+    color: #2E86AB !important;
+    border: 2px solid #2E86AB !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+.stDownloadButton > button:hover {
+    background-color: #2E86AB !important;
+    color: #ffffff !important;
+}
+
+/* ── 文件上传区 ── */
+.stFileUploader > div {
+    border: 2px dashed #2E86AB !important;
+    border-radius: 10px !important;
+    background-color: #EFF8FC !important;
+    transition: border-color 0.3s ease, background-color 0.3s ease !important;
+}
+.stFileUploader > div:hover {
+    border-color: #1a5f7a !important;
+    background-color: #E0F0F8 !important;
+}
+
+/* ── 输入框 ── */
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea {
+    border-radius: 6px !important;
+    border: 1.5px solid #CED4DA !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+    color: #000000 !important;
+}
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+    border-color: #2E86AB !important;
+    box-shadow: 0 0 0 3px rgba(46,134,171,0.2) !important;
+}
+
+/* ── 选择框 ── */
+.stSelectbox > div > div {
+    border-radius: 6px !important;
+    border: 1.5px solid #CED4DA !important;
+    transition: border-color 0.3s ease !important;
+}
+
+/* ── 多选框 ── */
+.stMultiSelect > div > div {
+    border-radius: 6px !important;
+}
+
+/* ── 分割线 ── */
+hr {
+    border: none !important;
+    border-top: 1.5px solid #DEE2E6 !important;
+    margin: 1rem 0 !important;
+}
+
+/* ── 侧边栏 ── */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #E9ECEF !important;
+}
+section[data-testid="stSidebar"] .stMarkdown h2,
+section[data-testid="stSidebar"] .stMarkdown h3 {
+    color: #2E86AB !important;
+}
+
+/* ── 标签页 ── */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 4px;
+    background-color: #F0F4F8 !important;
+    border-radius: 8px;
+    padding: 4px;
+}
+.stTabs [data-baseweb="tab"] {
+    border-radius: 6px !important;
+    padding: 0.5rem 1.2rem !important;
+    font-weight: 500 !important;
+    color: #555 !important;
+    transition: all 0.2s ease !important;
+}
+.stTabs [aria-selected="true"] {
+    background-color: #2E86AB !important;
+    color: #ffffff !important;
+}
+
+/* ── 错误/警告提示框 ── */
+.stAlert {
+    border-radius: 8px !important;
+}
+
+/* ── 表格 ── */
+.stDataFrame {
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* ── 进度条 ── */
+.stProgress > div > div > div > div {
+    background-color: #2E86AB !important;
+}
+
+/* ── 响应式布局 ── */
+@media (max-width: 1024px) {
+    .main-header h1 { font-size: 1.5rem !important; }
+    .metric-value   { font-size: 1.6rem !important; }
+}
+@media (max-width: 768px) {
+    .main-header    { padding: 1.2rem 1rem; }
+    .main-header h1 { font-size: 1.2rem !important; }
+    .card           { padding: 1rem; }
+}
+
+/* ── 自定义徽标/标签 ── */
+.badge {
+    display: inline-block;
+    padding: 0.2em 0.7em;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+.badge-primary { background: #EFF8FC; color: #2E86AB; border: 1px solid #2E86AB; }
+.badge-success { background: #E8FAF7; color: #2EC4B6; border: 1px solid #2EC4B6; }
+.badge-warn    { background: #FEF3EE; color: #E76F51; border: 1px solid #E76F51; }
+.badge-danger  { background: #FDECEA; color: #E63946; border: 1px solid #E63946; }
+
+/* ── 步骤指引 ── */
+.step-guide {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+    background: #EFF8FC;
+    border-left: 4px solid #2E86AB;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+.step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2E86AB;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
