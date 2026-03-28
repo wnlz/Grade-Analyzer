@@ -30,7 +30,8 @@ pip install -r requirements.txt
 ```
 grade_analyzer/
 ├── main.py                   # Streamlit 主应用
-├── run.py                    # 一键启动脚本（自动安装依赖+打开浏览器）
+├── run.py                    # 初始化脚本（自动安装依赖+打开浏览器）
+├── 执行.bat                  # 一键启动脚本
 ├── generate_sample.py        # 示例数据生成器
 ├── requirements.txt          # 依赖包列表
 ├── utils/
@@ -39,8 +40,9 @@ grade_analyzer/
 │   ├── pdf_generator.py      # PDF 报告生成（ReportLab）
 │   └── storage_manager.py    # 本地临时缓存管理
 └── assets/
-    ├── styles.css            # 自定义 CSS 样式
-    └── logo.png              # 学校 Logo（可替换）
+│   ├── styles.css            # 自定义 CSS 样式
+│   └── logo.png              # 学校 Logo（可替换）
+└── temp_cache/               # 临时缓存，可定期清理
 ```
 
 ---
